@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="icon-font.css">
+
+
+    <style>
+
+        body {
+            /* font-family: Arial, Helvetica, sans-serif;
+            font-family: Verdana, Geneva, Tahoma, sans-serif; */
+            font-family: Verdana, Arial, sans-serif;
+            /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+            font-weight: 800;
+            /* font-family: 'Baloo Bhaina 2', cursive;
+            font-family: 'Reenie Beanie', cursive; */
+            background-color:pink;
+            /* background-image: url(ck.jpg); */
+            
+        }
+
+        legend {
+            background-color: purple;
+            border-radius: 20px;
+            padding: 12px;
+            color:white;
+            border: 2px solid blue;
+           
+        }
+
+        fieldset {
+            background-color: lavender;
+            border: 5px solid darkblue;
+            border-radius: 10px;
+            width: 720px;
+            margin-bottom: 10px;
+            /* box-shadow: 1px 5px rgba(0,0,50,0.2); */
+        }
+
+        div {
+            margin: 2px;
+        }
+
+        label {
+            display: inline-block;
+            text-align: right;
+            vertical-align: top; */
+             width: 200px; 
+        }
+
+        input[type="radio"]+label, input[type="checkbox"]+label {
+            width: auto;
+        }
+
+        .range-caption {
+            background-color: darkcyan;
+            color: white;
+            border-radius: 6px;
+            font-size: 12px;
+            padding:6px;
+
+        }
+
+        input[type="submit"] {
+            background-color: orange;
+            color:#ffffff;
+            font-size: 30px;
+            padding: 25px;
+            /* box-shadow: 1px 2px rgba(0,0,0,0.2); */
+
+        }
+        input[type="submit"]:hover {
+            background-color: blue;
+        }
+
+        /* .gender {
+            display: inline;
+            margin-left: 110px ;
+        } */
+
+        div:hover {
+            color: blue;
+        }
+
+        .submit-icon {
+
+        }
+
+    </style>
+    <title>form workshop</title>
+</head>
+<body>
+    <form action="https://learn.nucamp.co/show_everything.php" method="POST" enctype="multipart/form-data">
+        <fieldset>
+            <legend>your face</legend>
+            <div>
+                <label for="avatar">upload your image</label>
+                <input type="file" id = "avatar" name="avatar" required>
+            </div>
+            image preview:
+            <img id="preview" width="500">
+        </fieldset>
+    
+        <fieldset>
+            <legend>your details</legend>
+            <div>
+                <label >gender:</label>
+                <input type="radio" id="woman" name="gender" value="woman" required>
+                <label for="woman">woman</label>
+                <input type="radio" id="man" name="gender" value="man">
+                <label for="man">man</label>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">other</label>
+                <!-- <input type="radio" id="other" name="gender" value="other">
+                <label for="man">other</label> -->
+            </div>
+
+            <div>
+                <label for="dob">date of birth</label>
+                <input type="number" id="age" name="age">
+            </div>
+
+            <div>
+                <label for="color">favorite color</label>
+                <input type="color" id="color" name="color">
+            </div>
+
+            <div>
+                <label for="country">country</label>
+                <select name="country" id="country">
+                    <option value="choose a country">choose a country</option>
+                    <option value="brazil">brazil</option>
+                    <option value="usa">usa</option>
+                    <option value="eritrea">eritrea</option>
+                    <option value="ethiopia">ethiopia</option>
+                    <option value="kenya">kenya</option>
+                    <option value="republic of california">republic of california</option>
+                <!-- </select> -->
+            </div>
+
+            <div>
+                <label for="Salary">salary: </label>
+                <span class="range-caption">rich</span>
+                <input type="range" id="salary" name="salary" min="0" max="100" value="50">
+                <span class="range-caption">poor</span>
+            </div>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>contact info</legend>
+            <div>
+                <label for="email">email: </label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="phone">phone:</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            <div>
+                <label for="address">address: </label>
+                <textarea name="address" id="address" cols="40" rows="5"></textarea>
+            </div>
+            <div>
+
+                <label for="">contact methods</label>
+                <input type="checkbox" name="contact" id="emailCheckbox" value="email">
+                <label for="emailCheckbox">email: </label>
+                <input type="checkbox" name="contact" id="phoneCheckbox" value="phone">
+                <label for="phoneCheckbox">phone: </label>
+                
+                
+            </div>
+        </fieldset>
+
+        <div>
+            <input type="submit">
+        </div>
+    
+    
+    </form>
+
+    <script src="https://url.nucamp.co/datingjs"></script>
+    
+</body>
+</html>
